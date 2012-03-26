@@ -33,7 +33,7 @@ cookbook_file "/usr/sbin/rebuild-iptables" do
   mode 0755
 end
 
-case node[:platform]
+case node['platform']
 when "ubuntu", "debian"
   iptables_save_file = "/etc/iptables/general"
 
